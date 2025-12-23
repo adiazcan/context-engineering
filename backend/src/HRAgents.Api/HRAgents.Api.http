@@ -1,0 +1,6 @@
+@HRAgents.Api_HostAddress = http://localhost:5288
+
+GET {{HRAgents.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
