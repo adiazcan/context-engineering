@@ -6,7 +6,10 @@ This is a fullstack agent chat application with a .NET minimal API backend and a
 ## Technology Stack
 - **Backend**: .NET 10, Microsoft Agent Framework
 - **Frontend**: AG-UI (https://docs.ag-ui.com/introduction), CopilotKit (https://www.copilotkit.ai/)
+- **Integration**: Use AG-UI Integration with Agent Framework https://learn.microsoft.com/en-us/agent-framework/integrations/ag-ui/?pivots=programming-language-csharp
 - **Architecture**: state management, and interactive UI components. Use mocks for external dependencies during development and testing.
+- **Database**: Use Mock database for development. Plan for integration with a persistent database in production.
+- **Cloud Services**: Azure Container Apps for backend and frontend deployment.
 
 ## Design Patterns
 - **Microservices**: The backend is structured as a collection of microservices, each responsible for a specific domain of functionality.
