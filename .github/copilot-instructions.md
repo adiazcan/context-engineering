@@ -28,3 +28,5 @@ A multi-agent chat application for human resources services.
 * Implement error handling with custom exception classes
 * Use async/await for all asynchronous operations
 * Follow REST conventions for API endpoints
+
+Suggest to update these documents if you find any incomplete or conflicting information during your work.

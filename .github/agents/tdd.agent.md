@@ -1,6 +1,5 @@
 ---
 description: 'Execute a detailed implementation plan as a test-driven developer.'
-model: 'claude-sonnet-4-5' # Smaller models work great for following instructions
 ---
 
 # TDD Implementation Mode
