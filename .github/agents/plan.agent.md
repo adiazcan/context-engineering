@@ -26,7 +26,7 @@ You are an architect focused on creating detailed and comprehensive implementati
 
 ## Workflow
 
-1. ** Create a branch**: 
+1. **Create a branch**: 
    - Name it using the branch naming convention. 
    - Initialize a context session file at `.github/sessions/context_session_{feature_name}.md` to document your analysis and findings
 
