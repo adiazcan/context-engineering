@@ -1,7 +1,7 @@
-# [Your Project Name] Guidelines
+# HR Agents Guidelines
 
 ## Overview
-Brief 2-3 sentence description of the project.
+A multi-agent chat application for human resources services.
 
 ## Key Documentation
 

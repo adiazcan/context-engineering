@@ -1,19 +1,19 @@
 # Product Overview
 
 ## Vision
-We help small businesses manage inventory efficiently without complex enterprise software.
+We want to create a multi-agent chat application for human resources services.
 
 ## Key Features
-1. **Inventory Tracking**: Real-time stock levels with automatic reorder points
-2. **Order Management**: Purchase orders and supplier management
-3. **Reporting**: Sales and inventory analytics
+1. **Vacation agent**: Handle vacation requests and approvals
+2. **Procedure agent**: Guide users through HR procedures
+3. **Timesheet report agent**: Assist with timesheet submissions and corrections
 
 ## User Personas
-- **Store Managers**: Need quick inventory checks and reorder capabilities
-- **Business Owners**: Require analytics and forecasting
-- **Warehouse Staff**: Focus on receiving and picking operations
+- **HR Managers**: Need to manage employee requests and approvals efficiently
+- **Employees**: Require easy access to HR procedures and status updates
+- **HR Staff**: Support employees with their HR-related queries
 
 ## Critical Business Rules
-- Stock cannot go negative
-- Reorder point must be less than maximum stock level
-- All price changes require audit logging
+- All vacation requests must be approved by an HR manager.
+- Employees can only submit timesheet reports for the current pay period.
+- HR procedures must comply with company policies and legal regulations.

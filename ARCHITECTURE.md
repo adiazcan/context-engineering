@@ -1,21 +1,14 @@
 # System Architecture
 
 ## Overview
-Our application follows a microservices architecture with three main services...
+This is a fullstack agent chat application with a .NET minimal API backend and a TypeScript frontend. The system is designed to facilitate real-time communication between users and agents, leveraging modern web technologies for scalability and maintainability. 
 
 ## Technology Stack
-- Frontend: React 18 with TypeScript
-- Backend: Node.js with Express
-- Database: PostgreSQL with Prisma ORM
-- Cache: Redis
+- **Backend**: .NET, Microsoft Agent Framework
+- **Frontend**: TypeScript, AG-UI, CopilotKit
+- **Architecture**: real-time streaming, state management, and interactive UI components
 
 ## Design Patterns
-- Repository pattern for data access
-- Factory pattern for service instantiation
-- Observer pattern for event handling
-
-## Data Flow
-1. Client requests hit the API Gateway
-2. Gateway routes to appropriate microservice
-3. Service layer handles business logic
-4. Repository layer manages data persistence
+- **Microservices**: The backend is structured as a collection of microservices, each responsible for a specific domain of functionality.
+- **Dependency Injection**: Services and repositories are injected into controllers to enhance testability and maintainability.
+- **Event-Driven Architecture**: The system utilizes events to facilitate communication between services, enhancing scalability and responsiveness.
