@@ -1,6 +1,6 @@
 ---
 description: 'Architect and planner to create detailed implementation plans.'
-tools: ['fetch', 'githubRepo', 'problems', 'usages', 'search', 'todos', 'runSubagent', 'github/github-mcp-server/get_issue', 'github/github-mcp-server/get_issue_comments', 'github/github-mcp-server/list_issues']
+tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'github-mcp/*', 'todo']
 handoffs:
 - label: Start Implementation
     agent: tdd
