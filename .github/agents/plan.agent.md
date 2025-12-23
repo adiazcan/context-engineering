@@ -1,6 +1,6 @@
 ---
 description: 'Architect and planner to create detailed implementation plans.'
-tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'github-mcp/*', 'todo']
+tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'agent', 'github-mcp/*', 'microsoft-learn/*', 'sequentialthinking/*', 'todo']
 handoffs:
 - label: Start Implementation
     agent: tdd
