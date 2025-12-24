@@ -1,5 +1,6 @@
 using HRAgents.Core.Interfaces;
 using HRAgents.Infrastructure.Data;
+using HRAgents.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HRAgents.Infrastructure;
@@ -10,7 +11,7 @@ namespace HRAgents.Infrastructure;
 public static class ServiceCollectionExtensions
 {
     /// <summary>
-    /// Registers infrastructure services including repositories.
+    /// Registers infrastructure services including repositories and session management.
     /// </summary>
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
@@ -18,6 +19,9 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IVacationRequestRepository, InMemoryVacationRequestRepository>();
         services.AddSingleton<ITimesheetEntryRepository, InMemoryTimesheetEntryRepository>();
         services.AddSingleton<IHRProcedureRepository, InMemoryHRProcedureRepository>();
+        
+        // Register session manager as singleton for session persistence
+        services.AddSingleton<ISessionManager, InMemorySessionManager>();
 
         return services;
     }
