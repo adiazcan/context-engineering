@@ -1,4 +1,8 @@
+using HRAgents.Api.Endpoints;
+using HRAgents.Api.Middleware;
+using HRAgents.Api.Services;
 using HRAgents.Infrastructure;
+using Microsoft.Extensions.AI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +18,14 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add infrastructure services (repositories)
+// Add infrastructure services (repositories and session management)
 builder.Services.AddInfrastructure();
+
+// Register mock chat client for development (replace with actual LLM in production)
+builder.Services.AddHRAgents(sp => new MockChatClient());
+
+// Register agent router
+builder.Services.AddScoped<IAgentRouter, AgentRouter>();
 
 // Add services to the container
 builder.Services.AddEndpointsApiExplorer();
@@ -56,19 +66,27 @@ if (app.Environment.IsDevelopment())
     app.UseCors("DevelopmentCors");
 }
 
+// Add global error handling
+app.UseErrorHandling();
+
 app.UseHttpsRedirection();
 
 // Map health check endpoint
 app.MapHealthChecks("/health");
 
-// Example endpoint - will be replaced with actual agent endpoints
+// Map API info endpoint
 app.MapGet("/api/info", () => new
 {
     Application = "HR Agents",
     Version = "1.0.0",
-    Environment = app.Environment.EnvironmentName
+    Environment = app.Environment.EnvironmentName,
+    AvailableAgents = new[] { "vacation", "procedure", "timesheet" }
 })
 .WithName("GetApiInfo")
+.WithTags("Info")
 .WithOpenApi();
+
+// Map chat endpoints
+app.MapChatEndpoints();
 
 app.Run();
